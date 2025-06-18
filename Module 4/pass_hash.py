@@ -61,7 +61,7 @@ def authenticate_user (stored_user, stored_pw_hash):
         else:
             break
 
-    if pw_attempt >= 4 and success_login = False:
+    if pw_attempt >= 4 and success_login == False:
         pw_attempt+=1
         print(f"You've attempted the password {pw_attempt} times")
         print("Maximum attempts reached. System locked for 10 minutes. \n")

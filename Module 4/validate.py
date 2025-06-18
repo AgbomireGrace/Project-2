@@ -62,7 +62,11 @@ def main():
 
     checked_chars = 0 #character index tracker
 
-    while True:
+    # Check flags for sucessful username creation
+    finish = False
+    success_user = False
+
+    while finish == False:
      #reset tracker to zero if it loops again
          checked_chars = 0
          username = input("\n Please enter a username: ")
@@ -77,11 +81,43 @@ def main():
             #check if we've reached end of username, display results
             if checked_chars == len(username):
                  print(f"\nYour username is {username}")
-                 break
+                 success_user = True #creation of successful username
+                    # Check flags for sucessful username creation
+                 if success_user == True:
+                     finish = True
+                     break
+                 
+
+            
             
         
 
 
 if __name__ == "__main__":
         main()
+
+        
+
+#     while True:
+#      #reset tracker to zero if it loops again
+#          checked_chars = 0
+#          username = input("\n Please enter a username: ")
+
+#          for character in username:
+#             #increment the tracker by 1 for each character searched
+#             if character in big_alpha:
+#                  checked_chars+=1
+#             else:
+#                  print(f"\nError! {character} is not allowed")
+
+#             #check if we've reached end of username, display results
+#             if checked_chars == len(username):
+#                  print(f"\nYour username is {username}")
+#                  break
+            
+        
+
+
+# if __name__ == "__main__":
+#         main()
         
