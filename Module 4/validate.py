@@ -67,7 +67,7 @@ def main():
     success_user = False
 
     while finish == False:
-     #reset tracker to zero if it loops again
+     #reset tracker  to zero if it loops again
          checked_chars = 0
          username = input("\n Please enter a username: ")
 
@@ -90,13 +90,15 @@ def main():
 
             
             
-        
+          
 
 
 if __name__ == "__main__":
         main()
 
-        
+
+     
+
 
 #     while True:
 #      #reset tracker to zero if it loops again

@@ -41,11 +41,13 @@ def authenticate_user (stored_user, stored_pw_hash):
             if bcrypt.checkpw(password_attempt, stored_pw_hash):
                 print("\nAuthentication successful! You have access.\n")
                 success_login = True
+            # else:
+            #     print("\nAuthentication failed")
                 break
 
 
 
-        if stored_user != user_attempt or bcrypt.checkpw(password_attempt, stored_pw_hash) == False:
+        if stored_user != user_attempt or bcrypt.checkpw(password_attempt, stored_pw_hash):
           if pw_attempt < 1:
             print("\nAuthentication failed! Incorrect Credentials, please try again")
             pw_attempt+=1
@@ -66,7 +68,7 @@ def authenticate_user (stored_user, stored_pw_hash):
         print(f"You've attempted the password {pw_attempt} times")
         print("Maximum attempts reached. System locked for 10 minutes. \n")
 
-#Main logic
+#Main  logic
 def main():
     print("Welcome to the secure authentication system!")
 
@@ -79,3 +81,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
